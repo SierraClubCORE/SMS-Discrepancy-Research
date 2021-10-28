@@ -71,8 +71,8 @@ SELECT
 FROM hstep3;
 
 -- JOIN
-SELECT a.phone, a.sf_sms_status, b.hustle_sms_status
-FROM sfstep4 a
-LEFT JOIN hstep4 b
+SELECT a.phone, a.hustle_sms_status, b.sf_sms_status
+FROM hstep4 a
+LEFT JOIN sfstep4 b
 ON a.phone = b.phone
-WHERE a.sf_sms_status <> b.hustle_sms_status;
+WHERE b.sf_sms_status <> a.hustle_sms_status;
