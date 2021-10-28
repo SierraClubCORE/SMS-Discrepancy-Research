@@ -63,6 +63,6 @@ FROM hstep3;
 -- JOIN
 SELECT a.phone, a.mc_sms_status, b.hustle_sms_status
 FROM mcstep4 a
-LEFT JOIN hstep4 b
+JOIN hstep4 b
 ON a.phone = b.phone
 WHERE a.mc_sms_status <> b.hustle_sms_status;
